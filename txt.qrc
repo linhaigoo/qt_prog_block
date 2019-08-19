@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>demon</file>
+        <file>vbs_file</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,5 @@
+Set objShell=CreateObject("Wscript.Shell")
+scriptPath=createobject("Scripting.FileSystemObject").GetFile(Wscript.ScriptFullName).ParentFolder.Path
+objShell.CurrentDirectory = scriptPath
+'Wscript.Echo objShell.CurrentDirectory
+objShell.Run "cmd /c demon WebPrinter WebPrinter.exe",0

@@ -1,0 +1,17 @@
+REM @echo off
+
+set process_name=%1
+set program_path=%2
+
+:check_process
+tasklist -v | findstr /i %process_name% > NUL
+if ErrorLevel 1 (
+        goto start_program
+) else (
+        timeout /t 5 /nobreak > NUL
+        goto check_process
+)
+
+:start_program
+%~dp0%program_path%
+goto check_process
